@@ -5,6 +5,7 @@ import pickle
 from nltk.corpus import stopwords
 import string
 import nltk
+# nltk.download()
 from nltk.stem.porter import PorterStemmer
 
 ps = PorterStemmer()
@@ -56,7 +57,7 @@ def prediction():
         predict = model.predict(vector.transform([news]))[0]
         # print(predict)
 
-        return render_template("prediction.html", prediction_text="News headline is -> {}".format(predict))
+        return render_template("prediction.html", prediction_text="News  is -> {}".format(predict))
 
 
     else:
